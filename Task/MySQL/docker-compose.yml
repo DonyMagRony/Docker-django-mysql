@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    container_name: your-database-container
+    environment:
+      MYSQL_ROOT_PASSWORD: 1111
+      MYSQL_DATABASE: db
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 1111
+    ports:
+      - "3333:3306"
+    volumes:
+      - /path/on/host:/var/lib/mysql
