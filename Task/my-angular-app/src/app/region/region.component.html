@@ -1,0 +1,20 @@
+<div class="region-tree-container">
+  <ul class="region-tree">
+    <ng-container *ngFor="let entry of regionTreeMap">
+      <li [style.marginLeft.px]="entry.depth * 20">
+        <a [routerLink]="['/region/', entry.region.id]">{{ entry.region.name }}</a>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+<div class="input-container">
+  <input type="text" [(ngModel)]="newRegionName" placeholder="Region Name">
+  <select [(ngModel)]="newRegionLocation">
+    <option [ngValue]="null">None (Root Region)</option>
+    <option *ngFor="let region of regions" [ngValue]="region">{{ region.name }}</option>
+  </select>
+  <button (click)="addRegion()">Add Region</button>
+</div>
+
+<router-outlet></router-outlet>

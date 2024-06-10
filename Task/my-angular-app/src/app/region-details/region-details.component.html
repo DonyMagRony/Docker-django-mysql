@@ -1,0 +1,23 @@
+<div *ngIf="region" class="region-details-container">
+    <h2>Region Details</h2>
+    <ul>
+        <li><strong>ID:</strong> {{ region.id }}</li>
+        <li><strong>Name:</strong> {{ region.name }}</li>
+        <li><strong>Location:</strong> {{ getLocationName(region.location) }}</li>
+    </ul>
+    <button (click)="delete()">Delete</button>
+</div>
+
+<div class="update-region-container">
+    <h3>Update Region</h3>
+    <label for="newRegionName">New Name:</label>
+    <input type="text" id="newRegionName" [(ngModel)]="newRegionName" placeholder="Enter new name">
+    <label for="newRegionLocation">New Location:</label>
+    <select id="newRegionLocation" [(ngModel)]="newRegionLocation">
+        <option [ngValue]="null">None (Root Region)</option>
+        <option *ngFor="let region of regions" [ngValue]="region">{{ region.name }}</option>
+    </select>
+    <button (click)="update()">Update</button>
+</div>
+
+<router-outlet></router-outlet>

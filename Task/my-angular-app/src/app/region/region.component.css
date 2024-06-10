@@ -1,0 +1,54 @@
+/* Container for the region tree */
+.region-tree-container {
+    margin-bottom: 20px; /* Add space below the region tree */
+  }
+  
+  /* Styles for the region tree */
+  .region-tree {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  .region-tree li {
+    margin-left: 20px; /* Indent each level of the tree */
+  }
+  
+  .region-tree a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+  }
+  
+  .region-tree a:hover {
+    color: #007bff; /* Change link color on hover */
+  }
+  
+  /* Container for input elements */
+  .input-container {
+    margin-bottom: 20px; /* Add space below the input elements */
+  }
+  
+  /* Styles for input elements */
+  .input-container input[type="text"],
+  .input-container select {
+    margin-right: 10px; /* Add space between input/select and button */
+    padding: 8px; /* Add padding to input/select */
+    border: 1px solid #ccc; /* Add border to input/select */
+    border-radius: 4px; /* Add border radius */
+    font-size: 14px; /* Set font size */
+  }
+  
+  /* Styles for the button */
+  .input-container button {
+    padding: 10px 20px; /* Add padding to button */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 14px; /* Set font size */
+  }
+  
+  .input-container button:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+  }
+  

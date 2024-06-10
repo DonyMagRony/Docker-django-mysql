@@ -1,0 +1,60 @@
+/* Apply styles to the container of region details */
+.store-add-container {
+    margin-bottom: 20px; /* Add space below the region details */
+}
+
+/* Style the button inside the region details container */
+.store-add-container button {
+    padding: 8px 16px; /* Add padding to the button */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 14px; /* Set font size */
+}
+
+/* Change button background color on hover */
+.store-add-container button:hover {
+    background-color: #0056b3; 
+}
+
+
+/* Apply styles to the container of region details */
+.store-add-container {
+    margin-bottom: 20px; /* Add space below the region details */
+}
+
+/* Style the form group (label + input/select) */
+.form-group {
+    margin-bottom: 15px; /* Add space between form groups */
+}
+
+.form-group label {
+    display: block; /* Make labels block-level elements */
+    margin-bottom: 5px; /* Add space below labels */
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%; /* Make inputs and selects full-width */
+    padding: 8px; /* Add padding to inputs and selects */
+    border: 1px solid #ccc; /* Add border to inputs and selects */
+    border-radius: 4px; /* Add border radius */
+}
+
+/* Style the submit button */
+.store-add-container button {
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Set font size */
+}
+
+/* Change button background color on hover */
+.store-add-container button:hover {
+    background-color: #0056b3; 
+}

@@ -1,0 +1,36 @@
+<div *ngIf="user">
+    <ul>
+        <li><strong>ID:</strong> {{ user.id }}</li>
+        <li><strong>Name:</strong> {{ user.name }}</li>
+        <li><strong>Location:</strong> {{ regionName }}</li>
+        <li><strong>Stores:</strong>
+            <ul>
+                <li *ngFor="let storeName of storeNames">{{ storeName }}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div>
+    <button (click)="delete()" class="delete-button">Delete</button>
+</div>
+
+<div class="update-user-container">
+    <h3>Update User</h3>
+    <form (ngSubmit)="update()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="updatedName" name="name" placeholder="Enter user name" required>
+
+        <label for="location">Location:</label>
+        <select id="location" [(ngModel)]="updatedLocation" name="location" required>
+            <option *ngFor="let region of regions" [ngValue]="region.id">{{ region.name }}</option>
+        </select>
+
+        <!-- If stores are editable, provide options for selecting stores -->
+        <label for="stores">Stores:</label>
+        <select id="stores" [(ngModel)]="updatedStores" name="stores" multiple>
+            <option *ngFor="let store of stores" [ngValue]="store.id">{{ store.name }}</option>
+        </select>
+
+        <button type="submit" class="update-button">Update User</button>
+    </form>
+</div>

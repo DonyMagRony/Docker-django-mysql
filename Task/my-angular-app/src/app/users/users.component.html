@@ -1,0 +1,34 @@
+<div class="create-user">
+    <h3>Create New User</h3>
+    <form (ngSubmit)="createUser()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" [(ngModel)]="newUser.name" name="name" placeholder="Enter user name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <select id="location" [(ngModel)]="newUser.location" name="location" required>
+                <option *ngFor="let region of regions" [ngValue]="region.id">{{ region.name }}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="stores">Stores:</label>
+            <select id="stores" [(ngModel)]="newUser.stores" name="stores" multiple>
+                <option *ngFor="let store of stores" [ngValue]="store.id">{{ store.name }}</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create User</button>
+    </form>
+</div>
+
+<div class="users">
+    <h3>Users</h3>
+    <div *ngFor="let user of users" class="user-item">
+        <a [routerLink]="['/user/', user.id]">
+            <p>{{ user.name }}</p>
+        </a>
+    </div>
+</div>

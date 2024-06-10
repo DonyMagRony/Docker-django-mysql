@@ -1,0 +1,25 @@
+<div class="store-details-container" *ngIf="store">
+    <ul>
+        <li><strong>ID:</strong> {{ store.id }}</li>       
+        <li>
+            <a [routerLink]="['/store/' + store.id]">
+                <strong>Name:</strong> {{ store.name }}
+            </a>
+        </li>
+        <li><strong>Location:</strong> {{ getLocationName(store.location) }}</li>
+    </ul>
+    <button (click)="delete()" class="delete-button">Delete</button>
+</div>
+
+<div class="update-store-container" *ngIf="isStoreRoute()">
+    <h3>Update Store</h3>
+    <label for="newStoreName">New Name:</label>
+    <input type="text" id="newStoreName" [(ngModel)]="newStoreName" placeholder="Enter new name">
+    
+    <label for="newRegionLocation">New Location:</label>
+    <select id="newRegionLocation" [(ngModel)]="newStoreLocation">
+        <option *ngFor="let region of regions" [ngValue]="region.id">{{ region.name }}</option>
+    </select>
+      
+    <button (click)="update()" class="update-button">Update</button>
+</div>
